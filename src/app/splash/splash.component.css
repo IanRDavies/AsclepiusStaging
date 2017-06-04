@@ -1,0 +1,170 @@
+
+/*
+Navy: #03276D
+Bright Blue: #0E43E3
+Light Blue: #00A5F7
+Light Grey: #F7F7F7
+White: #FFFFFF
+*/
+
+
+.jumbotron h1 {
+	font-family: "Antwerp Semi Bold";
+	font-size:8rem;
+	color:white;
+}
+@media(min-width: 768px){
+.jumbotron h1 {
+	font-size:8rem;
+}
+}
+@media(max-width: 767px){
+.jumbotron h1 {
+	font-size:6.5rem;
+}
+}
+@media(max-width: 576px){
+.jumbotron h1 {
+	font-size:5rem;
+}
+}
+
+.title-line {
+    background-color: white;
+    height:10px;
+    margin-top: 75px;
+}
+.logo-link{
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left: 0;
+	z-index: 1;
+}
+
+h2 {
+    font-family: "ATC Harris";
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+.subtitle-line {
+	background-color: white;
+	height: 5px;
+	max-width: 90%;
+    margin-left: 0;
+}
+
+.centered{
+	position:absolute;
+	width:181.1px;
+	left:0;
+	right:0;
+	margin-left: auto;
+	margin-right: auto;
+}
+#buttons-div{
+	bottom: 100px;
+}
+
+
+#top-panel {
+	background: inherit;
+	color: white;
+	min-height: 495px;
+	position: relative;
+	padding:0;
+	margin:0;
+}
+.jumbotron {
+	height: 100%;
+}
+#top-info {
+	padding: 0 5%;
+	overflow-y: hidden;
+	height: 100%;
+	width:100%;
+}
+hr.bottom {
+    margin-bottom: 0px;
+    bottom: 0;
+}
+#log-in-button {
+	color: #0E43E3;
+	background: #fff;
+}
+#sign-up-button {
+	background: #0E43E3;
+	color: #fff;
+}
+#log-in-button, #sign-up-button {
+	border-color: rgba(53, 53, 53, 0.5);
+}
+#login-popup-container {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	padding-top: 150px;
+	z-index: 10;
+	background: rgba(0,0,0,0.5);
+	top: 0px;
+	left: 0px;
+}
+#sign-up-popup-container {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	padding-top: 150px;
+	z-index: 10;
+	background: rgba(0,0,0,0.5);
+	top: 0px;
+	left: 0px;
+}
+.show-popup {
+	display: block;
+}
+.hide-popup {
+	display: none;
+}
+#login-form {
+	width: 300px;
+	height: 400px;
+	background: #F7F7F7;
+	margin: 0 auto;
+	border: 3px solid #FFF;
+	border-radius: 5px;
+}
+#sign-up-form {
+	width: 300px;
+	height: 400px;
+	background: #F7F7F7;
+	margin: 0 auto;
+	border: 3px solid #FFF;
+	border-radius: 5px;
+}
+.popup-form-title {
+	color: #03276D;
+	text-align: center;
+	margin-top: 5px;
+}
+.error-message {
+	padding-top: 20px;
+	color: red;
+	font-weight: 600;
+	text-align: center;
+	vertical-align: middle;
+}
+.close-icon {
+	color: rgba(36,36,36,0.7);
+	position: relative;
+	top: 5px;
+	left: 93%;
+	font-weight: 600;
+	font-size: 15px;
+}
+.close-icon:hover {
+	color: rgba(36,36,36,1);
+	cursor: pointer;
+}

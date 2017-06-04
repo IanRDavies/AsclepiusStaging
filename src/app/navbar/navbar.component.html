@@ -1,0 +1,34 @@
+<figure class="container-fluid">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <div class="nav-logo" alt="Asclepius Logo">
+	      <a class="logo-link" [routerLink]="['/']"></a>
+	    </div>
+	  </div>
+	  <!-- Collect the nav links, forms, and other content for toggling -->
+	  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	    <ul class="nav navbar-nav navbar-right">
+	      <li><a [routerLink]="['/about']" class="navbar-link">ABOUT</a></li>
+	      <li><a [routerLink]="['/listings']" ui-sref="ourServices" class="navbar-link">LISTINGS</a></li>
+	      <li><a [routerLink]="['/contact']" ui-sref="contactUs" class="navbar-link">CONTACT</a></li>
+	      <li *ngIf="(af.auth |async)" id="profile-menu">
+	      	<img class="profile-thumbnail" src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/user-male-icon.png" [routerLink]="['/my-profile']">
+	      	<ul id="profile-dropdown">
+	      	  <li [routerLink]="['/my-profile']">My Profile</li>
+	      	  <li (click)="signOut()">Log Out</li>
+	      	  <li>hello {{currentUser.firstName}}</li>
+	      	</ul>
+	      </li>
+	    </ul>
+	  </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</figure>

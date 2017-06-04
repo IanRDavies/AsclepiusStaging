@@ -1,0 +1,58 @@
+<div class="jumbotron container-fluid" id="top-panel">
+    <div class="container" id="top-info">
+
+      <hr class="title-line">
+      <div id="title-text">
+        <h1>
+        Affordable,<br>
+        quality tutoring<br>
+        for aspiring medics.
+        </h1>
+      </div> <!-- End top text -->
+
+      <div *ngIf="!(af.auth | async)" class="centered btn-group btn-group-lg" role="group" id="buttons-div"> <!-- Log In/Out / Sign Up buttons -->
+        <button id="log-in-button" class="btn btn-default" (click)="loginRedir()">Log In</button>
+        <button id="sign-up-button" class="btn btn-default" (click)="signUpRedir()">Sign Up</button>
+      </div>
+    </div> <!-- End top info -->
+</div> <!-- End Jumbotron -->
+
+
+<hr class="banner dark-banner bottom">
+
+
+  <div [class]="showHideLoginPopup" id="login-popup-container">
+    <form id="login-form">
+      <i class="lnr lnr-cross close-icon" (click)="closePopup('log in')"></i>
+      <h3 class="popup-form-title">Log In</h3>
+      <div class="form-group">
+        <input placeholder="email" type="email" class="form-control" name="email" [(ngModel)]="email" required>
+        <input placeholder="password" type="password" class="form-control" name="password" [(ngModel)]="password" required>
+      </div>
+      <button (click)="login(email, password)" class="btn btn-default">Log In</button>
+      <div *ngIf="loginError.errorThrown" class="error-message">
+        {{loginError.message}}<br/>
+        <span *ngIf="offerSignUpRedir">Please Take a Moment to <a (click)="signUpRedir()">Sign Up</a>.</span>
+      </div>
+    </form>
+  </div>
+  <div [class]="showHideSignUpPopup" id="sign-up-popup-container">
+    <form id="sign-up-form">
+      <i class="lnr lnr-cross close-icon" (click)="closePopup('sign up')"></i>
+      <h3 class="popup-form-title">Sign Up</h3>
+      <div class="form-group">
+        <input placeholder="First Name" type="text" name="firstName" class="form-control" [(ngModel)]="firstName" required>
+        <input placeholder="Surname" type="text" name="surname" class="form-control" [(ngModel)]="surname" required>
+        <input placeholder="Email" type="email" class="form-control" name="email" [(ngModel)]="email" required>
+        <input placeholder="Choose a Password" type="password" class="form-control" name="password" [(ngModel)]="password" required>
+        <input placeholder="Which areas are you willing to cover?" type="text" name="area" class="form-control" [(ngModel)]="area" required>
+        <div class="form-group">
+          <input id="image" name="image" type="file" [(ngModel)]="image" required>
+        </div>
+      </div>
+      <button (click)="createUser(firstName, surname, email, password, area)" class="btn btn-default">Sign Up</button>
+      <div *ngIf="signUpError.errorThrown" class="error-message">
+        {{signUpError.message}}
+      </div>
+    </form>
+  </div>

@@ -1,0 +1,13 @@
+<div class="container">
+	<h2 class="page-header">Edit Listing</h2>
+	<form (submit)="onEditSubmit()">
+		<div class="form-group">
+	 		<label>Title</label>
+	 		<input class="form-control" type="text" name="title" [(ngModel)]="title" required>
+		</div>
+		<div class="form-group">
+			<!-- <input id="image" name="image" type="file" [(ngModel)]="image" required> -->
+		</div>
+	</form>
+	<button class="btn btn-default" (click)="onEditSubmit()">Submit</button>
+</div>

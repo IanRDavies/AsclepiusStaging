@@ -1,0 +1,41 @@
+.title-text {
+	padding-top: 20px;
+	padding-right: 50px;
+}
+.thumbnail {
+	float: left;
+}
+.list-item-title {
+	color: white;
+}
+.list-item-description {
+	margin: 0px 15px; 
+	color: white;
+	text-decoration: none;
+}
+.list-item-description:hover {
+	text-decoration: none;
+}
+
+.centered{
+	position:absolute;
+	width:300.13px;
+	left:0;
+	right:0;
+	margin-left: auto;
+	margin-right: auto;
+}
+#buttons-div{
+	bottom: 50px;
+}
+#add-listing-button {
+	color: #0E43E3;
+	background: #fff;
+}
+#edit-listings-button {
+	background: #0E43E3;
+	color: #fff;
+}
+#log-in-button, #sign-up-button {
+	border-color: rgba(53, 53, 53, 0.5);
+}

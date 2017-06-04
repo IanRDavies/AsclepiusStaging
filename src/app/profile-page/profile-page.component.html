@@ -1,0 +1,28 @@
+<div class="container">
+	<div *ngIf="af.auth">
+		<h2 class="page-header">{{user.firstName}} {{user.surname}}<small>{{user.area}}</small></h2>
+		<div class="row">
+			<div class="col-md-3">
+				<img class="thumbnail" src="{{user.path}}" width="100%">
+			</div>
+			<div class="col-md-9">
+				<p>
+					{{user.description}}
+				</p>
+			</div>
+		</div>
+		
+		<br>
+		<!-- <a class="btn btn-default" [routerLink]="['/edit-listing/'+listing.$key]">Edit</a> -->
+		<!-- <a class="btn btn-danger" (click)="onDeleteClick()">Delete</a> -->
+		<h3>My Classes</h3>
+		<div *ngFor="let listing of user.listings">
+			<span>{{listing.title}}</span><small>{{listing.duration}}</small>
+			<div>{{listing.description}}</div>
+			<span>Goals</span>
+			<span *ngFor="let goal of listing.goals">{{goal}}</span>
+			<br>
+			<span>Price: {{listing.price}}</span>
+		</div>	
+	</div>
+</div>

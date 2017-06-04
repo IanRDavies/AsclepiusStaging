@@ -1,0 +1,22 @@
+<div class="container">
+	<h2 class="title-text">Current Listings</h2>
+	<ul *ngIf="listings" class="list-group">
+		<div class="list-item" *ngFor="let listing of listings">
+			<a [routerLink]="['/listing/'+listing.$key]">
+				<h4 class="list-item-title">{{listing.title}}</h4>
+				<img class="thumbnail" src="{{listing.imageUrl}}" height="150px">
+				<span class="list-item-description">{{listing.description}}</span>
+
+			</a>
+		</div> 
+	</ul>
+	<div *ngIf="!listings">
+		<p>There are currently no listings available.</p>
+		<!-- <p *ngIf="(af.auth |async)">Why not add your own listing <a [routerLink]="['../add-listing']">here</a>.</p> -->
+	</div>
+	     <div *ngIf="(af.auth | async)" class="centered btn-group btn-group-lg" role="group" id="buttons-div">
+        <button id="add-listing-button" class="btn btn-default" [routerLink]="['/add-listing']">Add A Listing</button>
+        <!-- add link to own listings page -->
+        <button id="edit-listings-button" class="btn btn-default">Edit My Listings</button>
+      </div>
+</div>
